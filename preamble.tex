@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{paracol}
+\usepackage{geometry}
+\usepackage{comment}
+\usepackage{cancel}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr}
+\usepackage{centernot}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{esvect}
+\usepackage{xfrac}
+\usepackage{xcolor}
+\usepackage{circuitikz}
+\usepackage{fontawesome}
+\usepackage{bm}
+\usepackage{silence}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{caption}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=1cm,rmargin=1cm}
+\setlength{\parindent}{0bp}
+\PassOptionsToPackage{normalem}{ulem}
+\usepackage{ulem}
+
+\usepackage[mathscr]{euscript}
+\let\euscr\mathscr \let\mathscr\relax
+\usepackage[scr]{rsfso}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+%This is just a personal preference of mine.
+\let\leq=\leqslant
+\let\geq=\geqslant
+\newcommand{\powerset}{\raisebox{.15\baselineskip}{\Large\ensuremath{\wp}}}
+\captionsetup{justification=raggedright,singlelinecheck=false}
+
+\newcommand\CC{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\s}[1]{$_{\mathrm{#1}}$}
+\newcommand{\p}[1]{$^{\mathrm{#1}}$}
+\newcommand{\inn}[2][n]{(#2_{#1})_{#1\in\NN}}
+\newcommand{\lifty}[1][n]{\lim_{#1\rightarrow\infty}}
+\newcommand{\liftz}[1][n]{\lim_{#1\rightarrow0}}
+\newcommand{\lifts}{\limsup_{n\rightarrow\infty}}
+\newcommand{\lifti}{\liminf_{n\rightarrow\infty}}
+\newcommand{\sifty}[1]{\sum_{n=1}^{\infty}{#1}}
+\newcommand{\cover}[2]{\stackrel{\mathclap{#1}}{#2}}
+\newcommand{\smat}[1]{\begin{smallmatrix*}#1\end{smallmatrix*}}
+\newcommand{\dmat}[1]{\begin{pmatrix*}#1\end{pmatrix*}}
+\newcommand{\bmat}[1]{\begin{bmatrix*}#1\end{bmatrix*}}
+\newcommand{\emat}[1]{\begin{matrix*}#1\end{matrix*}}
+\newcommand{\lmat}[1]{\begin{matrix*}[l]#1\end{matrix*}}
+\newcommand{\ds}{\displaystyle}
+\newcommand\Set[2]{\left\{\,#1\:\middle|\:#2\,\right\}}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\newcommand{\unit}[1]{\bm{\hat #1}}
+\newcommand{\brkt}[1]{\left(#1\right)}
+\newcommand{\prt}[2][]{\frac{\partial#1}{\partial#2}}
+\newcommand{\ech}[3]{\left(\emat{#1}\middle|\right.&\left.\emat{#2}\right)\lmat{#3}}
+\newcommand{\Sol}[0]{\uline{Solution:}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\gen}[1]{\left<#1\right>}
+\newcommand{\Gen}[2]{\left<\,#1\mid#2\,\right>}
+\renewcommand{\labelenumi}{\alph*{)}}
+\renewcommand{\labelenumii}{(\roman*{)}}
+\DeclareMathOperator{\ggt}{ggT}
+\DeclareMathOperator{\gal}{Gal}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\ccl}{Ccl}
+\DeclareMathOperator{\C}{C}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\kgv}{kgV}
+\DeclareMathOperator{\N}{N}
+\DeclareMathOperator{\Or}{O}
+\DeclareMathOperator{\aut}{Aut}
+\DeclareMathOperator{\Z}{Z}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\diag}{diag}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.9,0.9,0.9}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\setlength{\parindent}{0pt}
